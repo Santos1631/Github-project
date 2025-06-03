@@ -1,0 +1,353 @@
+section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 50%;
+    grid-template-areas: "accord-part form-part" "image-section form-part";
+    width: 100%;
+    height: 100vh;
+}
+
+section>div:nth-child(1) {
+    background-color: #000000;
+    color: white;
+    padding-top: 60px;
+}
+
+.image-section {
+    background-color: #000000;
+    background-image: url(./medias/signupmedia/bg-darkest--wide@2x-3a969c95af5f.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    grid-area: image-section;
+}
+
+.accord-part {
+    grid-area: accord-part;
+}
+
+.image-section>div {
+    display: flex;
+    justify-content: center;
+
+}
+
+.image-section img {
+    width: 80%;
+    margin: auto;
+}
+
+.image-section div:nth-child(2) {
+    display: none;
+}
+
+.image-section div:nth-child(3) {
+    display: none;
+}
+
+section>div>h1,
+section>div>p {
+    width: 70%;
+    margin: auto;
+}
+
+.my {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+.my p:nth-child(2) {
+    margin-top: -20px;
+}
+
+.accordion {
+    width: 70%;
+    margin: auto;
+}
+
+.accordion-button {
+    background-color: transparent;
+    width: 50%;
+    color: white;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+.accordion-button::after {
+    content: none;
+}
+
+.accordion-button svg {
+    margin-left: 7px;
+    transition: transform .2s ease;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.accordion-button:not(collapsed) {
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+}
+
+.accordion-button:not(.collapsed) svg {
+    transform: rotate(180deg) !important;
+}
+
+.accordion-item
+
+/*likely main parent-container that controls accordion items*/
+    {
+    background-color: transparent !important;
+}
+
+.accordion-body {
+    background-color: transparent !important;
+    color: white;
+}
+
+.form-part {
+    padding: 20px 50px;
+    grid-area: form-part;
+}
+
+.form-part>p {
+    text-align: end;
+    padding-bottom: 50px;
+}
+
+.form-div {
+    width: 75%;
+    margin: auto;
+}
+
+.form-div p {
+    font-size: .8rem;
+    color: #858889;
+    line-height: 1.3;
+    margin-top: 5px;
+}
+
+.form-part label {
+    width: 100%;
+    margin-top: 10px;
+    font-size: .95rem;
+}
+
+.form-part input {
+    display: block;
+    width: 98% !important;
+    padding: 8px;
+    border-radius: 8px;
+    border: .5px solid grey;
+    color: .5px solid grey;
+    margin-top: 5px;
+}
+
+.form-part select {
+    display: block;
+    width: 98% !important;
+    padding: 8px;
+    border-radius: 8px;
+    border: .5px solid grey;
+    color: .5px solid grey;
+    font-size: .95rem;
+    margin-top: 5px;
+}
+
+.form-part .Promotions input {
+    display: inline;
+    width: 15px !important;
+    height: 15px;
+}
+
+.form-part .Promotions label {
+    display: inline !important;
+    margin-left: 5px;
+    height: 15px;
+    font-size: .9rem;
+    margin-top: 0%;
+    cursor: pointer;
+}
+
+.form-part .Promotions a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.form-part .Promotions p {
+    font-size: .9rem;
+    color: black;
+    margin-top: 0% !important;
+    margin-bottom: 5px !important;
+}
+
+button {
+    width: 100% !important;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+footer {
+    width: 90%;
+    font-size: .75rem;
+    color: grey;
+    margin-top: 15px;
+}
+
+.form-part .mona-glow-div {
+    display: none;
+}
+
+@media (max-width:1300px) {
+    .image-section>div:nth-child(1) {
+        display: none;
+    }
+
+    .image-section>div:nth-child(2) {
+        display: block;
+    }
+
+    .image-section>div:nth-child(2) img {
+        width: 80%;
+        margin: auto;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width:1009px) {
+    section {
+        position: relative;
+        background-color: #000000;
+        background-image: url(./medias/signupmedia/bg-darkest--wide@2x-3a969c95af5f.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        grid-template-areas: "accord-part image-section" "form-part form-part";
+        grid-template-columns: 69% 30%;
+        grid-template-rows: 0.70fr 50%;
+        height: auto;
+        min-height: 110vh;
+    }
+
+    section>div:nth-child(1) {
+        padding-top: 20px;
+    }
+    section>div:nth-child(1) h1
+    {
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+    .image-section>div:nth-child(2) {
+        display: none;
+    }
+
+    .image-section>div:nth-child(3) {
+        position: absolute;
+    }
+
+    .image-section>div:nth-child(3) img {
+        width: 40%;
+    }
+
+    .image-section {
+        background-image: none;
+    }
+    .form-part
+    {
+        position: relative;
+    }
+    .form-div .mona-glow-div 
+    {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        left: 40%;
+        top: -8%;
+    }
+    .form-div .mona-glow-div img
+    {
+        width: 105px;
+        transform: rotate(-10deg);
+        z-index: 300;
+    }
+    .form-part {
+        background-color: white;
+        width: 90%;
+        margin: auto;
+        border-radius: 20px;
+    }
+    .form-part>p
+    {
+        display: none;
+    }
+    section>div>h1, section>div>p
+    {
+        width: 90%;
+        margin: auto;
+    }
+    .accordion {
+        width: 80%;
+        padding-left: 0% !important;
+    }
+    .accordion-body p
+        {
+            font-size: .9rem;
+        }
+}
+    @media (max-width:708px)
+    {
+        section
+        {
+            grid-template-columns: 1fr;
+        }
+        .image-section
+        {
+            display: none;
+        }
+        .form-part
+        {
+            margin-top: 30px;
+            width: 100%;
+            border-radius: unset;
+            padding: 20px;
+        }
+        .form-div
+        {
+            width: 100%;
+        }
+        .accordion-body p
+        {
+            font-size: .65rem;
+        }
+        .accordion {
+            width: 100%;
+        }
+    }
+    @media  (max-width:550px)
+    {
+        .accord-part
+        {
+            width: 100%;
+        }
+        .form-part >p
+        {
+            margin-top: 30px;
+        }
+    }
+    @media (max-width:412px)
+    {
+        
+    }
